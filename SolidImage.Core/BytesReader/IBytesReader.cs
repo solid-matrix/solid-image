@@ -21,6 +21,4 @@ public interface IBytesReader
     public void ReadBytes(Span<byte> buffer);
 
     public byte[] ReadBytes(int len);
-
-    public byte[] ReadBytes(long len);
 }

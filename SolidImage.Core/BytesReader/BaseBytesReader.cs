@@ -78,11 +78,4 @@ public class BaseBytesReader : IBytesReader
         _stream.ReadExactly(buffer);
         return buffer;
     }
-
-    public byte[] ReadBytes(long len)
-    {
-        var buffer = new byte[len];
-        _stream.ReadExactly(buffer);
-        return buffer;
-    }
 }

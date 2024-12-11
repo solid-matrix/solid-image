@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.Core", "SolidImage.Core\SolidImage.Core.csproj", "{4EE027B6-3A9E-40B8-B2CE-7349CB5F6567}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.Tiff.Format", "SolidImage.Tiff.Format\SolidImage.Tiff.Format.csproj", "{1C344128-3BDD-4132-A02A-F3F84A50A104}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{99D1D15A-0795-44BC-9793-431295581836}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
@@ -15,20 +11,36 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决�
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.Core", "SolidImage.Core\SolidImage.Core.csproj", "{27622BF4-7D7D-444B-995B-0F6DCD9CCE21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.TiffLib", "SolidImage.TiffLib\SolidImage.TiffLib.csproj", "{732D6FD7-3B07-414C-AB3D-5017CB5D67A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.TiffLib.JC", "SolidImage.TiffLib.JC\SolidImage.TiffLib.JC.csproj", "{71974FC6-9649-4C8A-9714-66EEF10E1AF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.TiffLib.Playground", "SolidImage.TiffLib.Playground\SolidImage.TiffLib.Playground.csproj", "{A0E96CFF-1A1C-4CB9-B6B5-3F52440B0DAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4EE027B6-3A9E-40B8-B2CE-7349CB5F6567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EE027B6-3A9E-40B8-B2CE-7349CB5F6567}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EE027B6-3A9E-40B8-B2CE-7349CB5F6567}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EE027B6-3A9E-40B8-B2CE-7349CB5F6567}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C344128-3BDD-4132-A02A-F3F84A50A104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C344128-3BDD-4132-A02A-F3F84A50A104}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C344128-3BDD-4132-A02A-F3F84A50A104}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C344128-3BDD-4132-A02A-F3F84A50A104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27622BF4-7D7D-444B-995B-0F6DCD9CCE21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27622BF4-7D7D-444B-995B-0F6DCD9CCE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27622BF4-7D7D-444B-995B-0F6DCD9CCE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27622BF4-7D7D-444B-995B-0F6DCD9CCE21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{732D6FD7-3B07-414C-AB3D-5017CB5D67A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732D6FD7-3B07-414C-AB3D-5017CB5D67A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732D6FD7-3B07-414C-AB3D-5017CB5D67A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732D6FD7-3B07-414C-AB3D-5017CB5D67A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71974FC6-9649-4C8A-9714-66EEF10E1AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71974FC6-9649-4C8A-9714-66EEF10E1AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71974FC6-9649-4C8A-9714-66EEF10E1AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71974FC6-9649-4C8A-9714-66EEF10E1AF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0E96CFF-1A1C-4CB9-B6B5-3F52440B0DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E96CFF-1A1C-4CB9-B6B5-3F52440B0DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E96CFF-1A1C-4CB9-B6B5-3F52440B0DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E96CFF-1A1C-4CB9-B6B5-3F52440B0DAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-﻿namespace SolidImage.Tiff.Format;
+﻿namespace SolidImage.TiffLib;
 
 public enum ByteOrder : ushort
 {

@@ -17,3 +17,13 @@ List of standard formats will be supported:
 For tiff format, with this library, user can create their own tiff-based format with extensions.
 
 ...
+
+## TODO LIST
+
+ - Compression Scheme Implementation
+   - 2: CCITT Group 3 1D
+   - 3: CCITT T.4
+   - 4: CCITT T.6
+   - 5: LZW
+   - 6: JPEG
+   - 32773: PackBits

@@ -1,4 +1,4 @@
-﻿namespace SolidImage.Tiff.Format.Enums;
+﻿namespace SolidImage.TiffLib.Enums;
 
 public enum SubfileType : uint
 {
