@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\SolidBase\SolidBase.BitsOp\SolidBase.BitsOp.csproj"/>
+        <ProjectReference Include="..\..\SolidBase\SolidBase.Lzw\SolidBase.Lzw.csproj"/>
+        <ProjectReference Include="..\SolidImage.Core\SolidImage.Core.csproj"/>
+    </ItemGroup>
+
+</Project>

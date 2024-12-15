@@ -13,11 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.Core", "SolidImage.Core\SolidImage.Core.csproj", "{27622BF4-7D7D-444B-995B-0F6DCD9CCE21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.TiffLib", "SolidImage.TiffLib\SolidImage.TiffLib.csproj", "{732D6FD7-3B07-414C-AB3D-5017CB5D67A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.TIFF", "SolidImage.TIFF\SolidImage.TIFF.csproj", "{732D6FD7-3B07-414C-AB3D-5017CB5D67A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.TiffLib.JC", "SolidImage.TiffLib.JC\SolidImage.TiffLib.JC.csproj", "{71974FC6-9649-4C8A-9714-66EEF10E1AF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.TIFF.JC", "SolidImage.TIFF.JC\SolidImage.TIFF.JC.csproj", "{71974FC6-9649-4C8A-9714-66EEF10E1AF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.TiffLib.Playground", "SolidImage.TiffLib.Playground\SolidImage.TiffLib.Playground.csproj", "{A0E96CFF-1A1C-4CB9-B6B5-3F52440B0DAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidImage.TIFF.Playground", "SolidImage.TIFF.Playground\SolidImage.TIFF.Playground.csproj", "{A0E96CFF-1A1C-4CB9-B6B5-3F52440B0DAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidBase.BitsOp", "..\SolidBase\SolidBase.BitsOp\SolidBase.BitsOp.csproj", "{C0695B1B-944E-4E63-932A-5A8D8013D2DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidBase.Lzw", "..\SolidBase\SolidBase.Lzw\SolidBase.Lzw.csproj", "{E572C46D-2E62-4CE6-84AF-E254D9BA4253}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,14 @@ Global
 		{A0E96CFF-1A1C-4CB9-B6B5-3F52440B0DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0E96CFF-1A1C-4CB9-B6B5-3F52440B0DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0E96CFF-1A1C-4CB9-B6B5-3F52440B0DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0695B1B-944E-4E63-932A-5A8D8013D2DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0695B1B-944E-4E63-932A-5A8D8013D2DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0695B1B-944E-4E63-932A-5A8D8013D2DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0695B1B-944E-4E63-932A-5A8D8013D2DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E572C46D-2E62-4CE6-84AF-E254D9BA4253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E572C46D-2E62-4CE6-84AF-E254D9BA4253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E572C46D-2E62-4CE6-84AF-E254D9BA4253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E572C46D-2E62-4CE6-84AF-E254D9BA4253}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
