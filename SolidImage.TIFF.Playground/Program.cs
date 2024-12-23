@@ -1,53 +1,45 @@
 ﻿using SolidImage.TIFF;
+using SolidImage.TIFF.JC;
 
 internal class Program
 {
+    private static void PrintTiffImage(TiffImage tiffImage)
+    {
+        foreach (var pair in tiffImage.EntryMap)
+        {
+            var entry = pair.Value;
+
+            if (!tiffImage.Parent.Options.TryGetTagName(entry.TagCode, out var tagName))
+            {
+                continue;
+            }
+
+            if (!tiffImage.Parent.Options.TryGetTypeName(entry.TypeCode, out var typeName))
+            {
+                continue;
+            }
+
+            Console.WriteLine($"[{entry.TagCode,5}]{tagName,-25} [{entry.TypeCode,1}]{typeName,-10}*{entry.Count,6} = {tiffImage.GetEntryPrintString(entry.TagCode)}");
+        }
+    }
+
     private static void PrintTiff(string path)
     {
         using var file = File.OpenRead(path);
 
-        var tiffCodec = new TiffCodec();
+        var tiffOptions = new TiffOptions()
+            .AddJCExtension();
 
-        var tiff = tiffCodec.DecodeOnlyDirectories(file);
+        var tiff = Tiff.DecodeDirectories(file, tiffOptions);
 
-        foreach (var ifd in tiff.Subfiles.Select(subfile => subfile.ImageFileDirectory))
+        foreach (var tiffImage in tiff.Images)
         {
-            Console.WriteLine($"SubfileType = {ifd.GetSubfileType()}");
-            Console.WriteLine($"Size = {ifd.GetImageWidth()} * {ifd.GetImageHeight()}");
-            Console.WriteLine($"BitsPerSample = {ifd.GetBitsPerSample()}");
-            Console.WriteLine($"Compression = {ifd.GetCompression()}");
-            Console.WriteLine($"Photometric = {ifd.GetPhotometric()}");
 
-            Console.WriteLine($"FillOrder = {ifd.GetFillOrder()}");
-
-            Console.WriteLine($"SamplesPerPixel = {ifd.GetSamplesPerPixel()}");
-
-            Console.WriteLine($"RowsPerStrip = {ifd.GetRowsPerStripe()}");
-
-            Console.WriteLine($"XResolution = {ifd.GetXResolution()}");
-            Console.WriteLine($"YResolution = {ifd.GetYResolution()}");
-            Console.WriteLine($"ResolutionUnit = {ifd.GetResolutionUnit()}");
-
-            Console.WriteLine($"Predictor = {ifd.GetPredictor()}");
-
-            Console.WriteLine($"|StripOffsets| = {ifd.GetStripOffsets()?.Length}");
-            Console.WriteLine($"|StripByteCounts| = {ifd.GetStripByteCounts()?.Length}");
-
-
-            var stripOffsets = ifd.GetStripOffsets() ?? [];
-            Console.Write($"StripOffsets[{stripOffsets.Length}] = ");
-            foreach (var stripOffset in stripOffsets) Console.Write($"{stripOffset}, ");
-            Console.WriteLine();
-
-            var stripByteCounts = ifd.GetStripByteCounts() ?? [];
-            Console.Write($"StripByteCounts[{stripByteCounts.Length}] = ");
-            foreach (var stripByteCount in stripByteCounts) Console.Write($"{stripByteCount}, ");
-            Console.WriteLine();
         }
     }
 
     private static void Main(string[] args)
     {
-        PrintTiff(@"..\..\..\..\..\_Temp\tiff-test\1\spring.tif");
+        PrintTiff(@"..\..\..\..\..\_Temp\JCFormats\241212\ok2.tif");
     }
 }

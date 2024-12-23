@@ -6,7 +6,9 @@ public class DirectoryEntry
 
     public ushort TypeCode { get; internal set; }
 
+    public int TypeSize { get; internal set; }
+
     public uint Count { get; internal set; }
 
-    public byte[] Data { get; internal set; } = default!;
+    public byte[] Data { get; internal set; } = null!;
 }
